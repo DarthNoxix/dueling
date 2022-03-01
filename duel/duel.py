@@ -39,23 +39,23 @@ def indicatize(d):
 
 WEAPONS = {
     'swing': {
-        'axe': 3,
-        'scimitar': 4,
-        'buzzsaw': 5,
-        'chainsaw': 6,
+        'dragonglass': 3,
+        'widows wail': 4,
+        'blackfyre': 5,
+        'brightroar': 6,
         'broadsword': 7,
-        'katana': 4,
-        'falchion': 5
+        'oathkeeper': 4,
+        'longclaw': 5
     },
     'fire': {
-        'raygun': 5,
-        'flamethrower': 6,
-        'crossbow': 3,
+        'longbow': 5,
+        'blessed flaming sword': 6,
+        'joffreys crossbow': 3,
         'railgun': 6,
         'ballista': 6,
         'catapult': 5,
-        'cannon': 4,
-        'mortar': 3
+        'dragon fire': 4,
+        'wildfire': 3
     },
     'stab': {
         'naginata': 5,
@@ -65,7 +65,7 @@ WEAPONS = {
 
 SINGLE_PROJECTILE = {
     'fire': {
-        'a psionic projectile': 4,
+        'a valaryian steel fragment': 4,
     },
     'hurl': {
         'pocket sand': 1,
@@ -73,8 +73,8 @@ SINGLE_PROJECTILE = {
         'a heavy rock': 3,
     },
     'toss': {
-        'a moltov cocktail': 4,
-        'a grenade': 5
+        'a bottle of wildfire': 4,
+        'a jug of wildfire': 5
     }
 }
 
@@ -83,19 +83,19 @@ FAMILIAR = {
         'their owl companion': 3,
     },
     'charge': {
-        'their pet goat': 3,
-        'their pet unicorn': 4,
+        'their pet lion': 3,
+        'their dire wolf': 4,
     },
     'constrict': {
-        'their thick anaconda': 4,
+        'their dragon': 4,
     }
 }
 
 SUMMON = {
     'charge': {
-        'a badass tiger': 5,
-        'a sharknado': 8,
-        'a starving komodo dragon': 5
+        'a valaryian dragon': 5,
+        'a wildfire canon': 8,
+        'a starving wight walker': 5
     },
     'swarm': {
         'all these muthafucking snakes': 5,
@@ -159,8 +159,8 @@ CRITICAL = {"Quicker than the eye can follow, {a} delivers a devastating blow wi
 
 HEALS = {
     'inject': {
-        'morphine': 4,
-        'nanomachines': 5
+        'milk of the poppy': 4,
+        'goat milk': 5
     },
     'smoke': {
         'a fat joint': 2,
@@ -180,11 +180,11 @@ HEALS = {
     },
     'drink': {
         'some': {
-            'Ambrosia': 7,
-            'unicorn piss': 5,
-            'purple drank': 2,
-            'sizzurp': 3,
-            'goon wine': 2
+            'wine': 7,
+            'ale': 5,
+            'beer': 2,
+            'water': 3,
+            'rum': 2
         },
         'a': {
             'generic hp potion': 5,
@@ -202,13 +202,13 @@ HEAL = {"{a} decides to {v} {o} instead of attacking.": HEALS,
         "{a} decides to meditate on their round.": 5}
 
 
-FUMBLE = {"{a} closes in on {d}, but suddenly remembers a funny joke and laughs instead.": 0,
+FUMBLE = {"{a} closes in on {d}, but suddenly remembers how stupid ned stark was and laughs.": 0,
           "{a} moves in to attack {d}, but is disctracted by a shiny.": 0,
           "{a} {v} their {o} at {d}, but has sweaty hands and loses their grip, hitting themself instead.": indicatize(WEAPONS),
           "{a} {v} their {o}, but fumbles and drops it on their {b}!": indicatize(WEAPONS)
           }
 
-BOT = {"{a} charges its laser aaaaaaaand... BZZZZZZT! {d} is now a smoking crater for daring to challenge the bot.": INITIAL_HP}
+BOT = {"Ser Gregor charges at {d} and decapitates them for daring to challenge him": INITIAL_HP}
 
 HITS = ['deals', 'hits for']
 RECOVERS = ['recovers', 'gains', 'heals']
